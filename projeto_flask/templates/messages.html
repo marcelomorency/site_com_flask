@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Mensagens Recebidas{% endblock %}
+
+{% block content %}
+<h2>Mensagens Recebidas</h2>
+
+{% if mensagens %}
+    <ul>
+    {% for mensagem in mensagens %}
+        <li><strong>{{ mensagem.nome }}:</strong> {{ mensagem.mensagem }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhuma mensagem foi recebida ainda.</p>
+{% endif %}
+
+<a href="/">Voltar para a página inicial</a>
+{% endblock %}

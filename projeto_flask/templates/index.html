@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+<h2>Bem-vindo à Página Inicial!</h2>
+<p>Esta é a página inicial do meu site com Flask.</p>
+
+<!-- Início do Carrossel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783" class="d-block w-100" alt="Cachoeira">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Cachoeira Tranquila</h5>
+        <p>Uma linda cachoeira em meio à natureza.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783" class="d-block w-100" alt="Montanha Nevada">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Montanhas Nevadas</h5>
+        <p>Uma impressionante paisagem de montanhas cobertas de neve.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783" class="d-block w-100" alt="Campo Florido">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Campo Florido</h5>
+        <p>Flores coloridas em um campo vasto e iluminado pelo sol.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
+<!-- Fim do Carrossel -->
+
+<!-- Estilos personalizados -->
+<style>
+  /* Reduz o tamanho do carrossel */
+  .carousel {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+
+  .carousel-item img {
+    height: 400px; /* Reduz a altura das imagens */
+    object-fit: cover;
+  }
+
+  /* Ajusta o tamanho das legendas */
+  .carousel-caption h5 {
+    font-size: 1.5em;
+  }
+
+  .carousel-caption p {
+    font-size: 1em;
+  }
+</style>
+
+{% endblock %}

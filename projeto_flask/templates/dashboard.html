@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Contato{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center display-4">Bem-vindo, {{ current_user.username }}!</h2>
+    <p class="text-center lead">Esta é sua área exclusiva.</p>
+
+    <div class="row mt-5">
+        <!-- Card 1 -->
+        <div class="col-md-3">
+            <div class="card card-hover shadow-sm">
+                <img src="https://images.unsplash.com/photo-1581291519195-ef11498d1cf1" class="card-img-top rounded-top" alt="Card 1">
+                <div class="card-body">
+                    <h5 class="card-title">Explorar</h5>
+                    <p class="card-text">Descubra novos lugares incríveis.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-3">
+            <div class="card card-hover shadow-sm">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="card-img-top rounded-top" alt="Card 2">
+                <div class="card-body">
+                    <h5 class="card-title">Aprender</h5>
+                    <p class="card-text">Expanda seu conhecimento.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-3">
+            <div class="card card-hover shadow-sm">
+                <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d" class="card-img-top rounded-top" alt="Card 3">
+                <div class="card-body">
+                    <h5 class="card-title">Conectar</h5>
+                    <p class="card-text">Encontre pessoas com interesses semelhantes.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-3">
+            <div class="card card-hover shadow-sm">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4" class="card-img-top rounded-top" alt="Card 4">
+                <div class="card-body">
+                    <h5 class="card-title">Criar</h5>
+                    <p class="card-text">Dê vida às suas ideias.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CSS para os efeitos de hover, cores e animações -->
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    h2 {
+        color: #343a40;
+    }
+
+    .card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card-title {
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    .card-text {
+        color: #6c757d;
+    }
+
+    .card-hover {
+        transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    }
+
+    .card-hover:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        background-color: #e9ecef;
+    }
+
+    .card-img-top {
+        border-radius: 10px 10px 0 0;
+        height: 150px;
+        object-fit: cover;
+    }
+</style>
+{% endblock %}

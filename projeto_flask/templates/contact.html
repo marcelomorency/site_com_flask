@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Contato{% endblock %}
+
+{% block content %}
+<h2>Entre em Contato</h2>
+<p>Preencha o formulário abaixo para enviar uma mensagem.</p>
+
+<form method="POST">
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="form-group">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn">Enviar</button>
+</form>
+
+<style>
+    h2 {
+        color: #3971ba;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.1em;
+        margin-bottom: 30px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-size: 1.1em;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+        border-color: #3971ba;
+        outline: none;
+    }
+
+    .btn {
+        background-color: #3971ba;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        cursor: pointer;
+        border-radius: 4px;
+        display: block;
+        width: 100%;
+    }
+
+    .btn:hover {
+        background-color: #3971ba;
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 1.8em;
+        }
+
+        form {
+            padding: 15px;
+        }
+
+        .btn {
+            font-size: 1.1em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn {
+            font-size: 1em;
+        }
+    }
+</style>
+
+{% endblock %}
